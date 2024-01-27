@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav{
+            background-color: aqua;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label, input, textarea, button {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/Index.html" style="text-decoration: none; color: white;">
+            <h1>ToDoList</h1>
+        <nav>
+            <a href="/views/tasks.ejs">Tasks</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <form>
+        <label for="title">Task Title:</label>
+        <input type="text" id="title" name="title" value="<%= title %>" required>
+
+        <label for="description">Task Description:</label>
+        <textarea id="description" name="description" rows="4" required><%= description %></textarea>
+
+        <button type="submit">Update Task</button>
+    </form>
+
+</body>
+</html>

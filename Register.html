@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 300px;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-container label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #495057;
+            display: block;
+        }
+
+        .form-container input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            outline: none;
+            display: block;
+            width: 100%;
+        }
+
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .form-container a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container" id="registerForm">
+            <h2>Register</h2>
+            <form method="post" action="/Register.html" onsubmit="return authenticate()">
+                <label for="registerUsername">Username:</label>
+                <input type="text" id="registerUsername" name="registerUsername" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+                
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="./Login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function authenticate()
+        {
+            var username = document.getElementById('registerUsername');
+            var phoneNumber = document.getElementById('phoneNumber');
+            var password = document.getElementById('registerPassword').value;
+            var cpassword = document.getElementById('confirmPassword').value;
+
+            if(password !== cpassword)
+            {
+                alert("Passwords dosent match !!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
