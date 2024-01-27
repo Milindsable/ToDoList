@@ -21,7 +21,7 @@ Welcome to the To-Do List application! This application allows users to manage t
 6. Open your web browser and go to http://localhost:8081.
 
 
-#Usage
+## Usage
 
 1. Login or Register:
 If you are an existing user, log in with your credentials.
@@ -46,9 +46,9 @@ Click on complete button to mark task as completed.
 7.Logout:
 Log out when you are done.
 
-#Code Structure and Key Decisions
+### Code Structure and Key Decisions
 
-#Project Structure
+## Project Structure
 
 app.js: Main application file.
 views/: Contains EJS templates for rendering views.
@@ -57,7 +57,7 @@ routes/: Defines routes and handles requests.
 models/: Defines database models and interactions.
 config.js: Configuration file for database connection.
 
-#Key Decisions
+## Key Decisions
 
 1. MVC Architecture:
 The project follows the Model-View-Controller (MVC) architecture for better organization and separation of concerns.
@@ -77,6 +77,6 @@ Express-session is implemented for user authentication and session management.
 6. Error Handling:
 Robust error handling is implemented to enhance the application's reliability.
 
-#Feel free to explore the codebase for more details on implementation.
-#This README template provides clear instructions on how to use your To-Do List application and offers insights into the code structure and key decisions made during development.
+## Feel free to explore the codebase for more details on implementation.
+# #This README template provides clear instructions on how to use your To-Do List application and offers insights into the code structure and key decisions made during development.
 
